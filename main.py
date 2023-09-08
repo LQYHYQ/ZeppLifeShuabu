@@ -29,9 +29,7 @@ def pushplus(content):
         "template": "html"
     }
     body = json.dumps(data).encode(encoding='utf-8')
-    response = requests.post(api_url, headers=headers, data=body)
-    print(response.text)
-    response.close()
+    requests.post(api_url, headers=headers, data=body)
 
 
 def main():
