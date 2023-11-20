@@ -11,7 +11,7 @@ import os
 
 
 config = configparser.ConfigParser()
-config.read(os.getcwd() + "config.ini")
+config.read(os.path.join(os.getcwd(), "config.ini"))
 
 
 # 使用pushplus服务推送
