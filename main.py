@@ -7,10 +7,11 @@ import random
 import requests
 import json
 import configparser
+import os
 
 
 config = configparser.ConfigParser()
-config.read("config.ini")
+config.read(os.getcwd() + "config.ini")
 
 
 # 使用pushplus服务推送
