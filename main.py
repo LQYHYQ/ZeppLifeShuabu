@@ -26,7 +26,7 @@ def pushplus(content):
         "title": "ZeppLife刷步执行通知",
         "content": content,
         "channel": "wechat",
-        "template": "html"
+        "template": "json"
     }
     body = json.dumps(data).encode(encoding='utf-8')
     requests.post(api_url, headers=headers, data=body)
@@ -43,7 +43,7 @@ def main():
     max_step = config.get("step", "max_step")
 
     # 步数取 min_step 至 max_step 随机数。
-    step = random.randint(min_step, max_step)
+    step = random.randint(int(min_step), int(max_step))
 
     base_url = "https://apis.jxcxin.cn/api/mi?"
     headers = {
