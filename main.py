@@ -61,7 +61,7 @@ def main():
     if response.status_code == 200:
         pushplus(response.text)
     else:
-        pushplus(response.status_code)
+        pushplus(response)
         response = requests.post(base_url, data=data)
         pushplus(response.text)
     response.close()
