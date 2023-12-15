@@ -60,6 +60,9 @@ def main():
     response = requests.post(base_url, headers=headers, data=data)
     if response.status_code == 200:
         pushplus(response.text)
+        if response.text == "数据库连接失败：SQLSTATE[HY000] [1040] Too many connections":
+            response2 = requests.post(base_url, headers=headers, data=data)
+            pushplus("第二次请求：{}".format(response2.text))
     else:
         pushplus(response)
         response = requests.post(base_url, data=data)
