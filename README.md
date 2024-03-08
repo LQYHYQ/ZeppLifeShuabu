@@ -1,6 +1,6 @@
 # ZeppLifeShuabu
 ## 项目弃用
-2024年1月31日更新，API Store的API已停用，本项目弃用。
+**2024年1月31日更新，API Store的API已停用，本项目弃用。**
 
 ## 介绍
 借助 [API Store](https://apis.jxcxin.cn/) 的 [微信运动刷步](https://apis.jxcxin.cn/doc/mi.html) API，通过ZeppLife(原小米运动)账号刷步，可同步至微信、支付宝。  
